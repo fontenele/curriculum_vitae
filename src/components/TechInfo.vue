@@ -1,0 +1,42 @@
+<template>
+    <v-container grid-list-md>
+        <v-layout row wrap>
+            <v-flex xs12>
+                <v-list>
+                    <v-list-tile
+                            v-for="item in techInfo"
+                            :key="item.label"
+                            avatar
+                            @click=""
+                    >
+                        <v-list-tile-content>
+                            <v-list-tile-title v-text="item.label"></v-list-tile-title>
+                        </v-list-tile-content>
+
+                        <v-list-tile-avatar>
+                            <v-progress-circular :rotate="-90" color="brown" :value="item.value">{{item.value}}</v-progress-circular>
+                        </v-list-tile-avatar>
+                    </v-list-tile>
+                </v-list>
+            </v-flex>
+        </v-layout>
+    </v-container>
+</template>
+
+<script>
+    export default {
+        name: "TechInfo",
+        data() {
+            let dataDefault = require('./../locale/en_US');
+            return {
+                techInfo: dataDefault.messages.profile.techInfo
+            }
+        }
+    }
+</script>
+
+<style scoped>
+    .v-progress-circular {
+        font-size: 8pt !important;
+    }
+</style>
