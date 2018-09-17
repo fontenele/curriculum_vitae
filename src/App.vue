@@ -1,10 +1,10 @@
 <template>
-    <v-app>
+    <v-app class="white--text" dark>
         <v-navigation-drawer
                 v-model="drawer"
                 :mini-variant="miniVariant"
-                disable-resize-watcher
-                disable-route-watcher
+                enable-resize-watcher
+                enable-route-watcher
                 permanent
                 hide-overlay
                 persistent
@@ -41,7 +41,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-toolbar app clipped-left>
+        <v-toolbar app clipped-left color="brown white--text">
             <v-btn icon @click.stop="miniVariant = !miniVariant">
                 <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
             </v-btn>
@@ -52,7 +52,7 @@
             <router-view></router-view>
         </v-content>
 
-        <v-footer fixed app>
+        <v-footer fixed app color="brown">
             <v-layout align-center justify-center row>
                 <v-flex xs10 offset-xs1 text-xs-center>
                     &copy; FonteSolutions - <a target="_blank" href="https://www.fontesolutions.com.br/">www.fontesolutions.com.br</a>
@@ -101,14 +101,9 @@
                         title: 'techInfo'
                     },
                     {
-                        icon: 'language',
-                        route: 'languages',
-                        title: 'languages'
-                    },
-                    {
-                        icon: 'info',
-                        route: 'resume',
-                        title: 'resume'
+                        icon: 'timeline',
+                        route: 'work-history',
+                        title: 'workHistory'
                     }
                 ],
                 langs: [
@@ -129,5 +124,10 @@
     .v-avatar img {
         width: 22px !important;
         height: 22px !important;
+    }
+
+    a {
+        color: orange !important;
+        text-decoration: none;
     }
 </style>

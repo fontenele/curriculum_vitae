@@ -1,11 +1,12 @@
 export const messages = {
     aboutMe: "Sobre mim",
-    resume: "Resumo",
     contact: "Contato",
     techInfo: "Informaçoes Técnicas",
     languages: "Idiomas",
     objectives: "Objetivos",
-    education: "Formaçao",
+    education: "Formação",
+    workHistory: "Histórico Profissional",
+    languagesLastYear: "Linguagens no último ano",
     profile: {
         name: 'Guilherme Fontenele',
         role: 'Programador Sênior',

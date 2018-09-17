@@ -1,11 +1,12 @@
 export const messages = {
     aboutMe: "About me",
-    resume: "Resume",
     contact: "Contact",
     techInfo: "Skill Info",
     languages: "Languages",
     objectives: "Objectives",
     education: "Education",
+    workHistory: "Work History",
+    languagesLastYear: "Languages over Last Year",
     profile: {
         // avatar: 'https://www.gravatar.com/avatar/0e6444e1f1ebb99855d89992df57a929',
         url: 'http://www.zend.com/en/yellow-pages/ZEND007838',
@@ -187,7 +188,7 @@ export const messages = {
             },
             {
                 company: 'EFTI/FATEP',
-                date: 'Set 2007 - Jul 2008',
+                date: 'Aug 2006 - Mar 2007',
                 tags: [
                     'PHP',
                     'JsWebGets',
