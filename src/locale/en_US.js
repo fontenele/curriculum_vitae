@@ -7,6 +7,7 @@ export const messages = {
     education: "Education",
     workHistory: "Work History",
     languagesLastYear: "Languages over Last Year",
+    certification: 'Certification',
     profile: {
         // avatar: 'https://www.gravatar.com/avatar/0e6444e1f1ebb99855d89992df57a929',
         url: 'http://www.zend.com/en/yellow-pages/ZEND007838',
@@ -48,6 +49,12 @@ export const messages = {
             {label: 'English', value: 70},
             {label: 'Spanish', value: 40},
         ],
+        certification: [
+            {
+                name: 'Zend Certified Engineer (ZCE) PHP 5',
+                url: 'http://www.zend.com/en/yellow-pages/ZEND007838'
+            }
+        ],
         workHistory: [
             {
                 company: 'AGU (Basis)',
@@ -56,6 +63,7 @@ export const messages = {
                     'PHP',
                     'Symfony 3',
                     'DB Oracle',
+                    'DB Postgres',
                     'Angular 2/5',
                     'DevOps',
                     'PrimeNG',
@@ -70,6 +78,41 @@ export const messages = {
                     'SOAP',
                     'RESTful',
                     'Docker',
+                    'DockerCompose',
+                    'Lumen',
+                    'Laravel',
+                    'Swagger',
+                ]
+            },
+            {
+                company: 'FonteSolutions (Reportei.com)',
+                date: 'Jun 2018 (Atual)',
+                tags: [
+                    'PHP',
+                    'Laravel',
+                    'NodeJs',
+                    'Vue.js',
+                    'Bootstrap 4',
+                    'DB Postgres',
+                    'RESTful',
+                    'Docker',
+                    'DockerCompose',
+                ]
+            },
+            {
+                company: 'FonteSolutions (AnasCleaningServices)',
+                date: 'Nov 2017 (Atual)',
+                tags: [
+                    'PHP',
+                    'Laravel',
+                    'NodeJs',
+                    'Angular 6',
+                    'NgBootstrap 4',
+                    'DB Postgres',
+                    'RESTful',
+                    'PHPUnit',
+                    'Docker',
+                    'DockerCompose',
                 ]
             },
             {
@@ -96,6 +139,21 @@ export const messages = {
                     'RESTful',
                     'Docker',
                     'OracleCloud',
+                ]
+            },
+            {
+                company: 'FonteSolutions (Virginia Darc)',
+                date: 'Fev 2014',
+                tags: [
+                    'PHP',
+                    'Laravel',
+                    'RequireJs',
+                    'Angular 1',
+                    'Bootstrap',
+                    'jQuery',
+                    'DB Postgres',
+                    'Oauth/JWT',
+                    'RESTful',
                 ]
             },
             {

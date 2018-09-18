@@ -7,11 +7,14 @@ export const messages = {
     education: "Formação",
     workHistory: "Histórico Profissional",
     languagesLastYear: "Linguagens no último ano",
+    certification: "Certificações",
     profile: {
         name: 'Guilherme Fontenele',
         role: 'Programador Sênior',
-        description: 'Certificado PHP ZCE com vasta experiência em Laravel, ZendFramework, Angular, NodeJS, TypeScript, jQuery, Twitter/Material Bootstrap, Ionic, Bower, GIT, SVN, Electron. Persistindo bancos de dados MySql, PostgreSQL, Oracle, SqLite, Firebase e BRS/Search. Vasta experiência nas APIs do Telegram, Facebook, Github e Google.',
-        objectives: 'Trabalhar como programador, arquiteto ou lider técnico para sistemas BackEnd/FrontEnd, sempre inovando e aprendendo novas tecnologias, adicionando e compartilhando meus conhecimentos com a equipe.',
+        description: 'Brasileiro, natural de Brasília/DF, sou programador sênior back-end, front-end, mobile e desktop com mais de 10 anos de experiência em desenvolvimento web, mobile e desktop.\n' +
+        'Prezo muito pela UX (User Experience), junto com seu desempenho. Um código fonte bem escrito e simples de entender e de dar manutenção.\n' +
+        'Sou certificado PHP ZCE (Zend Certified PHP Engineer) desde 2008, tenho perfil com experiência de líder técnico e arquiteto sênior, sempre inovando com novas tecnologias que surgem a cada dia no mercado para melhorar os projetos e adicionando e compartilhando meus conhecimentos com a equipe.',
+        objectives: 'Meus objetivos na área são participar de projetos inovadores, com perfil de arquiteto ou lider técnico para desenvolvimento de sistemas back-end, front-end, mobile e desktop.',
         education: {
             title: 'Jogos Digitais',
             degree: 'Curso Superior',

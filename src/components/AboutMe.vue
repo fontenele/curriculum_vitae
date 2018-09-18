@@ -19,6 +19,12 @@
                 </p>
                 <h3 class="pt">{{$t('objectives')}}</h3>
                 <p class="pa-4 text-xs-justify">{{$t('profile.objectives')}}</p>
+                <h3 class="pt">{{$t('certification')}}</h3>
+                <p class="pa-4">
+                    <span :key="i" v-for="(item, i) of certification">
+                        <a :href="item.url" target="_blank">{{item.name}}</a>
+                    </span>
+                </p>
                 <h3 class="pt">{{$t('education')}}</h3>
                 <p class="pa-4">
                     {{$t('profile.education.title')}}<br/>
@@ -40,13 +46,14 @@
             let dataDefault = require('./../locale/en_US');
             return {
                 avatar: dataDefault.messages.profile.avatarLocal ? require(`${dataDefault.messages.profile.avatar}`) : dataDefault.messages.profile.avatar,
+                certification: dataDefault.messages.profile.certification,
                 contact: {
                     email: dataDefault.messages.profile.email,
                     phone: dataDefault.messages.profile.phone,
                     site: dataDefault.messages.profile.site,
                     github: dataDefault.messages.profile.github,
                     linkedin: dataDefault.messages.profile.linkedin,
-                }
+                },
             }
         }
     }
