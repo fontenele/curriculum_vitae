@@ -2,10 +2,8 @@
     <v-container fluid>
         <timeline theme="brown">
             <template v-for="(item, index) in workHistory">
-                <timeline-title :key="index" bg-color="#795548">{{item.date}}</timeline-title>
-                <timeline-item :key="item.date" :hollow="false" bg-color="orange">
-                    {{item.company}}
-                    <br/>
+                <timeline-title :key="index" bg-color="orange">{{item.company}} <small># {{item.date}}</small></timeline-title>
+                <timeline-item :key="item.date" :hollow="false" bg-color="#795548">
                     <v-chip :key="indexChip" v-for="(tag, indexChip) in item.tags" small color="brown"
                             v-html="tag" class="px-2 py-2"></v-chip>
                 </timeline-item>

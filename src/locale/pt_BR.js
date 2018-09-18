@@ -8,6 +8,9 @@ export const messages = {
     workHistory: "Histórico Profissional",
     languagesLastYear: "Linguagens no último ano",
     certification: "Certificações",
+    portuguese: 'Português',
+    english: 'Inglês',
+    spanish: 'Espanhol',
     profile: {
         name: 'Guilherme Fontenele',
         role: 'Programador Sênior',

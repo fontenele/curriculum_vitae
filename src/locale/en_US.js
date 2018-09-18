@@ -8,16 +8,30 @@ export const messages = {
     workHistory: "Work History",
     languagesLastYear: "Languages over Last Year",
     certification: 'Certification',
+    portuguese: 'Portuguese',
+    english: 'English',
+    spanish: 'Spanish',
     profile: {
-        // avatar: 'https://www.gravatar.com/avatar/0e6444e1f1ebb99855d89992df57a929',
-        url: 'http://www.zend.com/en/yellow-pages/ZEND007838',
-        linkedin: 'https://www.linkedin.com/in/guilherme-fontenele',
+        name: 'Guilherme Fontenele',
+        role: 'Senior Developer',
+        description: 'Brazilian, native of Brasilia/DF, I am a back-end, front-end, mobile and desktop developer with more than 10 years of experience in web, mobile and desktop development.\n' +
+        'I greatly appreciate the UX (User Experience), along with its performance. A well-written and simple source code to understand and maintain.\n' +
+        'I have been a Zend Certified PHP Engineer (ZCE) since 2008, I have experience with a technical leader and senior architect, always innovating with new technologies that appear every day in the market to improve the projects and adding and sharing my knowledge with the team.',
+        objectives: 'My goals in the area are to participate in innovative projects, with architect profile or technical leader for development of back-end, front-end, mobile and desktop systems.',
+        education: {
+            title: 'Game Development',
+            degree: 'College degree',
+            school: 'UDF',
+            year: '2012'
+        },
+
         avatar: 'https://avatars2.githubusercontent.com/u/906710?s=460&v=4',
         avatarLocal: false,
         avatarSecondary: './assets/php5-zce.gif',
         avatarSecondaryLocal: true,
         site: 'https://guilherme.fontenele.net',
         github: 'https://github.com/fontenele',
+        linkedin: 'https://www.linkedin.com/in/guilherme-fontenele',
         email: 'guilherme@fontenele.net',
         phone: '+55 (61) 99621-2011',
         techInfo: [
@@ -45,9 +59,8 @@ export const messages = {
             {label: 'GIT', value: 75},
         ],
         languages: [
-            {label: 'Portuguese', value: 95},
-            {label: 'English', value: 70},
-            {label: 'Spanish', value: 40},
+            {label: 'portuguese', value: 95},
+            {label: 'english', value: 70},
         ],
         certification: [
             {
@@ -57,8 +70,54 @@ export const messages = {
         ],
         workHistory: [
             {
+                company: 'FonteSolutions (Reportei.com)',
+                date: 'Jun/2018 (Freelancer)',
+                tags: [
+                    'PHP',
+                    'Laravel',
+                    'NodeJs',
+                    'Vue.js',
+                    'Bootstrap 4',
+                    'DB Postgres',
+                    'RESTful',
+                    'Docker',
+                    'DockerCompose',
+                ]
+            },
+            {
+                company: 'FonteSolutions (AnasCleaningServices)',
+                date: 'Nov/2017 (Freelancer)',
+                tags: [
+                    'PHP',
+                    'Laravel',
+                    'NodeJs',
+                    'Angular 6',
+                    'NgBootstrap 4',
+                    'DB Postgres',
+                    'RESTful',
+                    'PHPUnit',
+                    'Docker',
+                    'DockerCompose',
+                ]
+            },
+            {
+                company: 'FonteSolutions (Virginia Darc)',
+                date: 'Fev/2014 (Freelancer)',
+                tags: [
+                    'PHP',
+                    'Laravel',
+                    'RequireJs',
+                    'Angular 1',
+                    'Bootstrap',
+                    'jQuery',
+                    'DB Postgres',
+                    'Oauth/JWT',
+                    'RESTful',
+                ]
+            },
+            {
                 company: 'AGU (Basis)',
-                date: 'Dez 2017 (Atual)',
+                date: 'Dez/2017 (Atual)',
                 tags: [
                     'PHP',
                     'Symfony 3',
@@ -85,39 +144,8 @@ export const messages = {
                 ]
             },
             {
-                company: 'FonteSolutions (Reportei.com)',
-                date: 'Jun 2018 (Atual)',
-                tags: [
-                    'PHP',
-                    'Laravel',
-                    'NodeJs',
-                    'Vue.js',
-                    'Bootstrap 4',
-                    'DB Postgres',
-                    'RESTful',
-                    'Docker',
-                    'DockerCompose',
-                ]
-            },
-            {
-                company: 'FonteSolutions (AnasCleaningServices)',
-                date: 'Nov 2017 (Atual)',
-                tags: [
-                    'PHP',
-                    'Laravel',
-                    'NodeJs',
-                    'Angular 6',
-                    'NgBootstrap 4',
-                    'DB Postgres',
-                    'RESTful',
-                    'PHPUnit',
-                    'Docker',
-                    'DockerCompose',
-                ]
-            },
-            {
                 company: 'BrScan',
-                date: 'Dez 2012 - Out 2017',
+                date: 'Dez/2012 - Out/2017',
                 tags: [
                     'PHP',
                     'ZF 1/2',
@@ -142,23 +170,8 @@ export const messages = {
                 ]
             },
             {
-                company: 'FonteSolutions (Virginia Darc)',
-                date: 'Fev 2014',
-                tags: [
-                    'PHP',
-                    'Laravel',
-                    'RequireJs',
-                    'Angular 1',
-                    'Bootstrap',
-                    'jQuery',
-                    'DB Postgres',
-                    'Oauth/JWT',
-                    'RESTful',
-                ]
-            },
-            {
                 company: 'CAPES (CTIS)',
-                date: 'Jun 2012 - Nov 2012',
+                date: 'Jun/2012 - Nov/2012',
                 tags: [
                     'PHP',
                     'Symfony',
@@ -171,7 +184,7 @@ export const messages = {
             },
             {
                 company: 'Presidência (META)',
-                date: 'Mar 2012 - Jun 2012',
+                date: 'Mar/2012 - Jun/2012',
                 tags: [
                     'PHP',
                     'DB PostgreSQL',
@@ -180,7 +193,7 @@ export const messages = {
             },
             {
                 company: 'CAPES (CTIS)',
-                date: 'Jun 2011 - Mar 2012',
+                date: 'Jun/2011 - Mar/2012',
                 tags: [
                     'PHP',
                     'Symfony',
@@ -192,7 +205,7 @@ export const messages = {
             },
             {
                 company: 'ABIN',
-                date: 'Jul 2009 - Jun 2011',
+                date: 'Jul/2009 - Jun/2011',
                 tags: [
                     'PHP',
                     'ActionScript3',
@@ -205,7 +218,7 @@ export const messages = {
             },
             {
                 company: 'MEC (Poliedro)',
-                date: 'Fev 2009 - Jul 2009',
+                date: 'Fev/2009 - Jul/2009',
                 tags: [
                     'PHP',
                     'FrameCalixto',
@@ -216,7 +229,7 @@ export const messages = {
             },
             {
                 company: 'ABIN',
-                date: 'Aug 2008 - Jan 2009',
+                date: 'Aug/2008 - Jan/2009',
                 tags: [
                     'PHP',
                     'XOOPS',
@@ -227,7 +240,7 @@ export const messages = {
             },
             {
                 company: 'EFTI/FATEP',
-                date: 'Set 2007 - Jul 2008',
+                date: 'Set/2007 - Jul/2008',
                 tags: [
                     'PHP',
                     'JsWebGets',
@@ -237,7 +250,7 @@ export const messages = {
             },
             {
                 company: 'Transoft',
-                date: 'Mar 2007 - Set 2007',
+                date: 'Mar/2007 - Set/2007',
                 tags: [
                     'PHP',
                     'DB Oracle',
@@ -246,7 +259,7 @@ export const messages = {
             },
             {
                 company: 'EFTI/FATEP',
-                date: 'Aug 2006 - Mar 2007',
+                date: 'Aug/2006 - Mar/2007',
                 tags: [
                     'PHP',
                     'JsWebGets',
@@ -256,7 +269,7 @@ export const messages = {
             },
             {
                 company: 'GOB',
-                date: 'Fev 2006 - Ago 2006',
+                date: 'Fev/2006 - Ago/2006',
                 tags: [
                     'JSP',
                     'Java',
@@ -264,23 +277,12 @@ export const messages = {
             },
             {
                 company: 'DITEC DPF',
-                date: 'Jun 2005 - Dez 2005',
+                date: 'Jun/2005 - Dez/2005',
                 tags: [
                     'JSP',
                     'JAVA',
                 ]
             }
         ],
-
-        name: 'Guilherme Fontenele',
-        role: 'Senior Developer',
-        description: 'PHP ZCE Certified and experienced Senior in Laravel, ZendFramework, Angular, NodeJS,TypeScript, jQuery, Twitter/Material Bootstrap, Ionic, Bower, GIT, SVN, Electron.Persisting databases MySql, PostgreSQL, Oracle, SqLite, Firebase and BRS/Search.Skill with integration of APIs Telegram, Facebook, Github and Google.',
-        objectives: 'Work as an engineer or architect BackEnd/FrontEnd, always innovating and learning new technologies, adding and sharing my knowledge with the team.',
-        education: {
-            title: 'Game Development',
-            degree: 'College degree',
-            school: 'UDF',
-            year: '2012'
-        },
     }
 };

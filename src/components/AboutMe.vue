@@ -13,9 +13,9 @@
                     <v-icon small class="mr-2">web</v-icon>
                     <a target="_blank" :href="contact.site">{{contact.site}}</a><br/>
                     <v-icon small class="mr-2">web</v-icon>
-                    <a target="_blank" :href="contact.github">{{contact.github}}</a><br/>
+                    <a target="_blank" :href="contact.github">GitHub</a><br/>
                     <v-icon small class="mr-2">web</v-icon>
-                    <a target="_blank" :href="contact.linkedin">{{contact.linkedin}}</a>
+                    <a target="_blank" :href="contact.linkedin">Linkedin</a>
                 </p>
                 <h3 class="pt">{{$t('objectives')}}</h3>
                 <p class="pa-4 text-xs-justify">{{$t('profile.objectives')}}</p>
