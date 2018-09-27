@@ -78,6 +78,7 @@
 
 <script>
     import router from './plugins/router'
+    import {curriculum} from './info'
 
     export default {
         name: 'App',
@@ -89,6 +90,8 @@
             }
         },
         data() {
+            // var a = new Info();
+            console.log(curriculum);
             let dataDefault = require('./locale/en_US');
             return {
                 drawer: true,
