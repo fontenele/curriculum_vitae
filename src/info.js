@@ -1,168 +1,261 @@
 import {Curriculum, TechInfo, Education, Certificate, Profile, WorkHistory} from './utils';
+export const curriculum = new Curriculum();
 
-export const curriculum = new Curriculum(
-    new Profile({
-        name: 'Guilherme Fontenele',
-        role: 'Senior Developer',
-        site: 'https://guilherme.fontenele.net',
-        github: 'https://github.com/fontenele',
-        linkedin: 'https://www.linkedin.com/in/guilherme-fontenele',
-        email: 'guilherme@fontenele.net',
-        phone: '+55 (61) 99621-2011',
-        avatar: 'https://avatars2.githubusercontent.com/u/906710?s=460&v=4',
-        description: 'Brazilian, native of Brasilia/DF, I am a back-end, front-end, mobile and desktop developer' +
-        ' with more than 10 years of experience in web, mobile and desktop development.\n' +
-        'I greatly appreciate the UX (User Experience), along with its performance. A well-written and simple' +
-        ' source code to understand and maintain.\n' +
-        'I have been a Zend Certified PHP Engineer (ZCE) since 2008, I have experience with a technical leader' +
-        ' and senior architect, always innovating with new technologies that appear every day in the market to' +
-        ' improve the projects and adding and sharing my knowledge with the team.',
-        objectives: 'My goals in the area are to participate in innovative projects, with architect profile' +
-        ' or technical leader for development of back-end, front-end, mobile and desktop systems.',
-    }),
-    [new Education('Game Development', 'College degree', 'UDF', '2012')],
-    [new Certificate('Zend Certified Engineer PHP 5', 'http://www.zend.com/en/yellow-pages/ZEND007838')],
-    [
-        // Langs
-        new TechInfo('PHP', 90),
-        new TechInfo('TypeScript', 85),
-        new TechInfo('ObjectiveC', 85),
-        new TechInfo('NodeJs', 45),
-        new TechInfo('RequireJS', 45),
-        new TechInfo('Swift', 20),
-        new TechInfo('Python', 25),
-        new TechInfo('ActionScript 2/3', 60),
-        // Platforms
-        new TechInfo('ReactNative', 55),
-        new TechInfo('Electron', 70),
-        new TechInfo('Cordova/Phonegap', 70),
-        new TechInfo('Docker', 80),
-        new TechInfo('DockerCompose', 80),
-        new TechInfo('Redis', 50),
-        new TechInfo('ElasticSearch', 30),
-        new TechInfo('Linux', 90),
-        // Frameworks
-        new TechInfo('Laravel', 90),
-        new TechInfo('Lumen', 80),
-        new TechInfo('Slim Framework 2/3', 70),
-        new TechInfo('ZendFramework 1/2', 80),
-        new TechInfo('Symfony 2/3', 70),
-        new TechInfo('Angular 1/2/6', 90),
-        new TechInfo('Ionic 1/2/3', 80),
-        new TechInfo('Express.js', 40),
-        // Views
-        new TechInfo('jQuery', 90),
-        new TechInfo('Vue.js', 50),
-        new TechInfo('Twig', 70),
-        new TechInfo('Blade', 80),
-        new TechInfo('Bootstrap 3/4', 90),
-        new TechInfo('Materialize', 90),
-        new TechInfo('Vuetify', 50),
-        // Databases
-        new TechInfo('PostgreSQL', 90),
-        new TechInfo('Oracle', 90),
-        new TechInfo('MySQL', 90),
-        new TechInfo('SqLite', 90),
-        new TechInfo('BRS/Search', 90),
-        // Social
-        new TechInfo('Google API', 70),
-        new TechInfo('Telegram BOT API', 70),
-        new TechInfo('Facebook/Instagram API', 70),
-        new TechInfo('Firebase API', 70),
-        new TechInfo('Azure API', 30),
-        // Webservers
-        new TechInfo('Apache', 90),
-        new TechInfo('Nginx', 90),
-        // VCS
-        new TechInfo('GIT', 85),
-        new TechInfo('SVN', 90),
-    ],
-    [new WorkHistory()]
-);
-
-
-// export default class Info {
-//     constructor() {
-//         this.profile = new Profile({
-//             name: 'Guilherme Fontenele',
-//             role: 'Senior Developer',
-//             site: 'https://guilherme.fontenele.net',
-//             github: 'https://github.com/fontenele',
-//             linkedin: 'https://www.linkedin.com/in/guilherme-fontenele',
-//             email: 'guilherme@fontenele.net',
-//             phone: '+55 (61) 99621-2011',
-//             avatar: '',
-//             description: 'Brazilian, native of Brasilia/DF, I am a back-end, front-end, mobile and desktop developer' +
-//             ' with more than 10 years of experience in web, mobile and desktop development.\n' +
-//             'I greatly appreciate the UX (User Experience), along with its performance. A well-written and simple' +
-//             ' source code to understand and maintain.\n' +
-//             'I have been a Zend Certified PHP Engineer (ZCE) since 2008, I have experience with a technical leader' +
-//             ' and senior architect, always innovating with new technologies that appear every day in the market to' +
-//             ' improve the projects and adding and sharing my knowledge with the team.',
-//             objectives: 'My goals in the area are to participate in innovative projects, with architect profile' +
-//             ' or technical leader for development of back-end, front-end, mobile and desktop systems.',
-//         });
-//         this.profile.setAvatar('https://avatars2.githubusercontent.com/u/906710?s=460&v=4');
-//         this.education = [
-//             new Education('Game Development', 'College degree', 'UDF', '2012')
-//         ];
-//         this.certificates = [
-//             new Certificate('Zend Certified Engineer PHP 5', 'http://www.zend.com/en/yellow-pages/ZEND007838')
-//         ];
-//         this.techInfo = [
-//             // Langs
-//             new TechInfo('PHP', 90),
-//             new TechInfo('TypeScript', 85),
-//             new TechInfo('ObjectiveC', 85),
-//             new TechInfo('NodeJs', 45),
-//             new TechInfo('RequireJS', 45),
-//             new TechInfo('Swift', 20),
-//             new TechInfo('Python', 25),
-//             new TechInfo('ActionScript 2/3', 60),
-//             // Platforms
-//             new TechInfo('ReactNative', 55),
-//             new TechInfo('Electron', 70),
-//             new TechInfo('Cordova/Phonegap', 70),
-//             new TechInfo('Docker', 80),
-//             new TechInfo('DockerCompose', 80),
-//             new TechInfo('Redis', 50),
-//             new TechInfo('ElasticSearch', 30),
-//             new TechInfo('Linux', 90),
-//             // Frameworks
-//             new TechInfo('Laravel', 90),
-//             new TechInfo('Lumen', 80),
-//             new TechInfo('Slim Framework 2/3', 70),
-//             new TechInfo('ZendFramework 1/2', 80),
-//             new TechInfo('Symfony 2/3', 70),
-//             new TechInfo('Angular 1/2/6', 90),
-//             new TechInfo('Ionic 1/2/3', 80),
-//             new TechInfo('Express.js', 40),
-//             // Views
-//             new TechInfo('jQuery', 90),
-//             new TechInfo('Vue.js', 50),
-//             new TechInfo('Twig', 70),
-//             new TechInfo('Blade', 80),
-//             new TechInfo('Bootstrap 3/4', 90),
-//             new TechInfo('Materialize', 90),
-//             new TechInfo('Vuetify', 50),
-//             // Databases
-//             new TechInfo('PostgreSQL', 90),
-//             new TechInfo('Oracle', 90),
-//             new TechInfo('MySQL', 90),
-//             new TechInfo('SqLite', 90),
-//             new TechInfo('BRS/Search', 90),
-//             // Social
-//             new TechInfo('Google API', 70),
-//             new TechInfo('Telegram BOT API', 70),
-//             new TechInfo('Facebook/Instagram API', 70),
-//             new TechInfo('Firebase API', 70),
-//             new TechInfo('Azure API', 30),
-//             // Webservers
-//             new TechInfo('Apache', 90),
-//             new TechInfo('Nginx', 90),
-//             // VCS
-//             new TechInfo('GIT', 85),
-//             new TechInfo('SVN', 90),
-//         ];
-//     }
-// }
+// Profile
+curriculum.profile = new Profile({
+    name: 'Guilherme Fontenele Teles',
+    role: 'Senior Developer',
+    site: 'https://guilherme.fontenele.net',
+    github: 'https://github.com/fontenele',
+    linkedin: 'https://www.linkedin.com/in/guilherme-fontenele',
+    email: 'guilherme@fontenele.net',
+    phone: '+55 (61) 99621-2011',
+    avatar: 'https://avatars2.githubusercontent.com/u/906710?s=460&v=4',
+    description: 'Brazilian, native of Brasilia/DF, I am a back-end, front-end, mobile and desktop developer' +
+    ' with more than 10 years of experience in web, mobile and desktop development.\n' +
+    'I greatly appreciate the UX (User Experience), along with its performance. A well-written and simple' +
+    ' source code to understand and maintain.\n' +
+    'I have been a Zend Certified PHP Engineer (ZCE) since 2008, I have experience with a technical leader' +
+    ' and senior architect, always innovating with new technologies that appear every day in the market to' +
+    ' improve the projects and adding and sharing my knowledge with the team.',
+    objectives: 'My goals in the area are to participate in innovative projects, with architect profile' +
+    ' or technical leader for development of back-end, front-end, mobile and desktop systems.',
+});
+// Education
+curriculum.education = [new Education('Game Development', 'College degree', 'UDF', '2012')];
+// Certificates
+curriculum.certificates = [new Certificate('Zend Certified Engineer PHP 5', 'http://www.zend.com/en/yellow-pages/ZEND007838')];
+// Tech Info
+curriculum.techInfo = [
+    // Langs
+    new TechInfo('PHP', 90),
+    new TechInfo('TypeScript', 85),
+    new TechInfo('ObjectiveC', 85),
+    new TechInfo('NodeJs', 45),
+    new TechInfo('RequireJS', 45),
+    new TechInfo('Swift', 20),
+    new TechInfo('Python', 25),
+    new TechInfo('ActionScript 2/3', 60),
+    // Platforms
+    new TechInfo('ReactNative', 55),
+    new TechInfo('Electron', 70),
+    new TechInfo('Cordova/Phonegap', 70),
+    new TechInfo('Docker', 80),
+    new TechInfo('DockerCompose', 80),
+    new TechInfo('Redis', 50),
+    new TechInfo('ElasticSearch', 30),
+    new TechInfo('Linux', 90),
+    // Frameworks
+    new TechInfo('Laravel', 90),
+    new TechInfo('Lumen', 80),
+    new TechInfo('Slim Framework 2/3', 70),
+    new TechInfo('ZendFramework 1/2', 80),
+    new TechInfo('Symfony 2/3', 70),
+    new TechInfo('Angular 1/2/6', 90),
+    new TechInfo('Ionic 1/2/3', 80),
+    new TechInfo('Express.js', 40),
+    // Views
+    new TechInfo('jQuery', 90),
+    new TechInfo('Vue.js', 50),
+    new TechInfo('Twig', 70),
+    new TechInfo('Blade', 80),
+    new TechInfo('Bootstrap 3/4', 90),
+    new TechInfo('Materialize', 90),
+    new TechInfo('Vuetify', 50),
+    // Databases
+    new TechInfo('PostgreSQL', 90),
+    new TechInfo('Oracle', 90),
+    new TechInfo('MySQL', 90),
+    new TechInfo('SqLite', 90),
+    new TechInfo('BRS/Search', 90),
+    // Social
+    new TechInfo('Google API', 70),
+    new TechInfo('Telegram BOT API', 70),
+    new TechInfo('Facebook/Instagram API', 70),
+    new TechInfo('Firebase API', 70),
+    new TechInfo('Azure API', 30),
+    // Webservers
+    new TechInfo('Apache', 90),
+    new TechInfo('Nginx', 90),
+    // VCS
+    new TechInfo('GIT', 85),
+    new TechInfo('SVN', 90),
+];
+// Work History
+curriculum.workHistory = [
+    new WorkHistory('DITEC', 'DPF', 'Estagiário', '06/2005', '12/2005', [
+        'HTML',
+        'CSS',
+        'JS'
+    ], 'http://www.pf.gov.br/'),
+    new WorkHistory('Grande Oriente do Brasil', 'GOB', 'Estagiário', '02/2006', '08/2006', [
+        'Portal GXP - Maçonaria',
+        'JSP',
+        'HTML',
+        'CSS',
+        'JS',
+        'SQL Server',
+    ], 'https://www.gob.org.br/'),
+    new WorkHistory('EFTI', 'FATEP', 'Programador PHP', '08/2006', '03/2007', [
+        'SIGA - Sistema Integrado de Gerenciamento Acadêmico',
+        'PHP OOP',
+        'JsWebGets Framework',
+        'Postgres',
+        'SOAP Client',
+        'UML',
+        'CVS',
+    ], 'http://www.fatepdf.edu.br/'),
+    new WorkHistory('Transoft', 'Transoft', 'Programador PHP', '03/2007', '09/2007', [
+        'TransNet - Sistema de Gestão Empresarial para Transportes',
+        'PHP OOP',
+        'Oracle',
+        'SOAP Client',
+        'MER',
+        'CVS',
+        'Linux',
+    ], 'https://www.transoft.com.br/'),
+    new WorkHistory('EFTI', 'FATEP', 'Programador PHP', '09/2007', '07/2008', [
+        'SIGA - Sistema Integrado de Gerenciamento Acadêmico',
+        'PHP OOP',
+        'JsWebGets Framework',
+        'SOAP Server/Client',
+        'UML',
+        'CVS',
+        'MXML',
+        'RIA',
+        'Flex',
+        'ActionScript3',
+        'Postgres',
+        'Java Ant',
+        'Linux'
+    ], 'http://www.fatepdf.edu.br/'),
+    new WorkHistory('Agência Brasileira de Inteligência', 'ABIN', 'Programador PHP', '08/2008', '01/2009', [
+        'XOOPS',
+        'Wordpress',
+        'PHP OOP',
+        'jQuery',
+        'SOAP Server/Client',
+        'Mysql',
+        'BRS/Search',
+        'CVS',
+    ], 'http://www.abin.gov.br/'),
+    new WorkHistory('Poliedro', 'MEC - Ministério da Educação', 'Programador PHP', '02/2009', '07/2009', [
+        'PHP OOP',
+        'FrameCalixto',
+        'jQuery',
+        'SOAP Server/Client',
+        'Postgres',
+        'Linux',
+        'CVS',
+    ], 'http://www.mec.gov.br/'),
+    new WorkHistory('Agência Brasileira de Inteligência', 'ABIN', 'Programador PHP', '07/2009', '06/2011', [
+        'XOOPS',
+        'Wordpress',
+        'PHP OOP',
+        'jQuery',
+        'Flex',
+        'MXML',
+        'ActionScript3',
+        'RIA',
+        'Adobe AIR',
+        'Mysql',
+        'BRS/Search',
+        'SOAP Server/Client',
+        'CVS',
+    ], 'http://www.abin.gov.br/'),
+    new WorkHistory('CTIS', 'CAPES - Coordenação de Aperfeiçoamento de Pessoal de Nível Superior', 'Programador PHP', '06/2011', '03/2012', [
+        'Ciência sem Fronteiras',
+        'PHP OOP',
+        'Symfony 1',
+        'jQuery',
+        'SOAP Server/Client',
+        'Postgres',
+        'Sybase',
+        'Oracle',
+        'SVN',
+    ], 'http://www.capes.gov.br/'),
+    new WorkHistory('META', 'Presidência da República do Brasil', 'Programador PHP', '03/2012', '06/2012', [
+        'SIMEC',
+        'SIMPR',
+        'PHP OOP',
+        'SOAP Server/Client',
+        'jQuery',
+        'Postgres',
+        'SVN',
+    ], 'http://presidencia.gov.br/'),
+    new WorkHistory('CTIS', 'CAPES - Coordenação de Aperfeiçoamento de Pessoal de Nível Superior', 'Programador PHP', '06/2012', '11/2012', [
+        'Ciência sem Fronteiras',
+        'PHP OOP',
+        'Symfony 1/2',
+        'jQuery',
+        'SOAP Server/Client',
+        'Postgres',
+        'Sybase',
+        'Oracle',
+        'SVN',
+    ], 'http://www.capes.gov.br/'),
+    new WorkHistory('BrScan', 'Brscan', 'Coordenador PHP', '12/2012', '10/2017', [
+        'Vivo GED',
+        'Vivo Maxvex',
+        'Claro GED',
+        'BrFlow',
+        'BrPronto',
+        'BrSafe',
+        'Br-eDoc',
+        'Oi 360',
+        'PHP OOP',
+        'ObjectiveC',
+        'TypeScript',
+        'Electron',
+        'Material',
+        'MaterializeCSS',
+        'GoogleMaterial',
+        'TwitterBootstrap',
+        'ZendFramework 2',
+        'w2ui',
+        'Laravel 5',
+        'Ionic 1/2',
+        'Angular 2/5',
+        'jQuery',
+        'OAuth/JWT',
+        'SOAP Service/Client',
+        'RESTFul Service/Client',
+        'Sqlite 3',
+        'Oracle',
+        'OracleCloud',
+        'Docker',
+        'DockerCompose',
+        'GIT',
+        'Linux',
+    ], 'https://www.brscan.com.br/'),
+    new WorkHistory('BASIS', 'AGU - Advocacia Geral da União', 'Coordenador PHP', '12/2017', null, [
+        'Sapiens',
+        'Banco De Talentos',
+        'Votação',
+        'PHP OOP',
+        'Symfony 3',
+        'TypeScript',
+        'GoogleMaterial',
+        'TwitterBootstrap',
+        'PrimeNG',
+        'Sencha ExtJS/Architect',
+        'ElasticSearch',
+        'Logstash',
+        'Kibana',
+        'Azure',
+        'Jenkins',
+        'PHPUnit',
+        'Lumen 5',
+        'Angular 2/5',
+        'jQuery',
+        'OAuth/JWT',
+        'SOAP Service/Client',
+        'RESTFul Service/Client',
+        'Sqlite 3',
+        'Oracle',
+        'Docker',
+        'DockerCompose',
+        'GIT',
+        'Linux',
+    ], 'https://www.agu.gov.br/'),
+];

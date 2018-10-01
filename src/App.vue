@@ -89,13 +89,30 @@
                 router.push({path: item.route})
             }
         },
+
+        watch: {
+            // windowHeight(newHeight, oldHeight) {
+                // this.txt = `it changed to ${newHeight} from ${oldHeight}`;
+            // }
+        },
+
+        mounted() {
+            this.$nextTick(() => {
+                window.addEventListener('resize', () => {
+                    this.size = window.innerWidth;
+                    this.miniVariant = this.size > 1000 ? false : true;
+                });
+            })
+        },
+
         data() {
             // var a = new Info();
             console.log(curriculum);
             let dataDefault = require('./locale/en_US');
             return {
+                size: window.innerWidth,
                 drawer: true,
-                miniVariant: true,
+                miniVariant: this.size > 1000 ? false : true,
                 avatar: dataDefault.messages.profile.avatarLocal ? require(`${dataDefault.messages.profile.avatar}`) : dataDefault.messages.profile.avatar,
                 items: [
                     {
