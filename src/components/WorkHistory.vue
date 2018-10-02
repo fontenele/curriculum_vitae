@@ -1,11 +1,16 @@
 <template>
     <v-container fluid>
         <timeline theme="brown">
-            <template v-for="(item, index) in workHistory">
-                <timeline-title :key="index" bg-color="orange">{{item.company}} <small># {{item.date}}</small></timeline-title>
-                <timeline-item :key="item.date" :hollow="false" bg-color="#795548">
-                    <v-chip :key="indexChip" v-for="(tag, indexChip) in item.tags" small color="brown"
-                            v-html="tag" class="px-2 py-2"></v-chip>
+            <template v-for="(item) in workHistory" track-by="index">
+                <timeline-title :key="item.for" bg-color="indigo"><h3>{{item.from}} - {{item.to ? item.to : $t('actual')}}</h3></timeline-title>
+                <timeline-item :key="item.to" bg-color="#2196f3">
+                    <h4 class="pb-2">{{item.company}}</h4>
+                    <div class="pb-2">{{$t('client')}}: <a :href="item.url" target="_blank">{{item.client}}</a></div>
+                    <div class="pb-2">{{$t('role')}}: {{item.role}}</div>
+                    <div class="pb-2">{{$t('techInfo')}}:
+                        <v-chip :key="indexChip" v-for="(tag, indexChip) in item.tags" small color="blue white--text"
+                                v-html="tag" class="px-2 py-2"></v-chip>
+                    </div>
                 </timeline-item>
             </template>
         </timeline>
@@ -14,6 +19,7 @@
 
 <script>
     import {Timeline, TimelineItem, TimelineTitle} from 'vue-cute-timeline'
+    import {curriculum} from './../info'
 
     export default {
         name: "WorkHistory",
@@ -23,9 +29,8 @@
             TimelineTitle
         },
         data() {
-            let dataDefault = require('./../locale/en_US');
             return {
-                workHistory: dataDefault.messages.profile.workHistory
+                workHistory: curriculum.workHistory
             }
         }
     }
@@ -33,6 +38,6 @@
 
 <style scoped>
     .timeline * {
-        color: #fff !important;
+        /*color:  !important;*/
     }
 </style>
