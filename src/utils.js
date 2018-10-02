@@ -19,15 +19,7 @@ export class Profile {
         this.linkedin = data.linkedin || '';
         this.description = data.description || '';
         this.objectives = data.objectives || '';
-        this.avatar = this.setAvatar(data.avatar);
-    }
-
-    setAvatar(image, isLocal) {
-        if (isLocal) {
-            this.avatar = image;
-        } else {
-            this.avatar = image;
-        }
+        this.avatar = data.avatar;
     }
 }
 

@@ -4,22 +4,12 @@ export const curriculum = new Curriculum();
 // Profile
 curriculum.profile = new Profile({
     name: 'Guilherme Fontenele Teles',
-    role: 'Senior Developer',
     site: 'https://guilherme.fontenele.net',
     github: 'https://github.com/fontenele',
     linkedin: 'https://www.linkedin.com/in/guilherme-fontenele',
     email: 'guilherme@fontenele.net',
     phone: '+55 (61) 99621-2011',
     avatar: 'https://avatars2.githubusercontent.com/u/906710?s=460&v=4',
-    description: 'Brazilian, native of Brasilia/DF, I am a back-end, front-end, mobile and desktop developer' +
-    ' with more than 10 years of experience in web, mobile and desktop development.\n' +
-    'I greatly appreciate the UX (User Experience), along with its performance. A well-written and simple' +
-    ' source code to understand and maintain.\n' +
-    'I have been a Zend Certified PHP Engineer (ZCE) since 2008, I have experience with a technical leader' +
-    ' and senior architect, always innovating with new technologies that appear every day in the market to' +
-    ' improve the projects and adding and sharing my knowledge with the team.',
-    objectives: 'My goals in the area are to participate in innovative projects, with architect profile' +
-    ' or technical leader for development of back-end, front-end, mobile and desktop systems.',
 });
 // Education
 curriculum.education = [new Education('Game Development', 'College degree', 'UDF', '2012')];
@@ -97,7 +87,7 @@ curriculum.workHistory = [
         'SQL Server',
     ], 'https://www.gob.org.br/'),
     new WorkHistory('EFTI', 'FATEP', 'Programador PHP', '08/2006', '03/2007', [
-        'SIGA - Sistema Integrado de Gerenciamento Acadêmico',
+        'SIGA - Integrado de Gerenciamento Acadêmico',
         'PHP OOP',
         'JsWebGets Framework',
         'Postgres',
@@ -106,7 +96,7 @@ curriculum.workHistory = [
         'CVS',
     ], 'http://www.fatepdf.edu.br/'),
     new WorkHistory('Transoft', 'Transoft', 'Programador PHP', '03/2007', '09/2007', [
-        'TransNet - Sistema de Gestão Empresarial para Transportes',
+        'TransNet - Gestão Empresarial para Transportes',
         'PHP OOP',
         'Oracle',
         'SOAP Client',
@@ -115,7 +105,7 @@ curriculum.workHistory = [
         'Linux',
     ], 'https://www.transoft.com.br/'),
     new WorkHistory('EFTI', 'FATEP', 'Programador PHP', '09/2007', '07/2008', [
-        'SIGA - Sistema Integrado de Gerenciamento Acadêmico',
+        'SIGA - Integrado de Gerenciamento Acadêmico',
         'PHP OOP',
         'JsWebGets Framework',
         'SOAP Server/Client',

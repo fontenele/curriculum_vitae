@@ -1,8 +1,7 @@
 <template>
-    <v-app class="white--text" dark>
+    <v-app>
         <v-navigation-drawer
                 v-model="drawer"
-                :mini-variant="miniVariant"
                 enable-resize-watcher
                 enable-route-watcher
                 permanent
@@ -10,23 +9,19 @@
                 persistent
                 clipped
                 fixed
+                width="240"
                 app>
-            <v-list dense>
-                <v-tooltip bottom>
-                    <v-list-tile avatar @click="goToAnchor({route: 'about-me'})" slot="activator">
-                        <v-list-tile-avatar>
-                            <img :src="avatar">
-                        </v-list-tile-avatar>
-                        <v-list-tile-content>
-                            <v-list-tile-title><h4>{{$t('profile.name')}}</h4></v-list-tile-title>
-                        </v-list-tile-content>
-                    </v-list-tile>
-                    <span v-html="$t('aboutMe')"></span>
-                </v-tooltip>
+            <div class="text-xs-center pt-4">
+                <v-avatar size="100px" class="align-center mb-2">
+                    <img :src="profile.avatar">
+                </v-avatar>
+                <h4>{{profile.name}}</h4>
+            </div>
+            <v-list>
                 <v-divider></v-divider>
                 <template v-for="(item, i) in items">
                     <v-tooltip bottom :key="i">
-                        <v-list-tile ripple @click="goToAnchor(item)" slot="activator">
+                        <v-list-tile :to="'/' + item.route" :append="true" ripple  :exact-active-class="'blue white--text'" slot="activator" :active-class="'white--text'">
                             <v-list-tile-action>
                                 <v-icon v-html="item.icon"></v-icon>
                             </v-list-tile-action>
@@ -41,10 +36,7 @@
             </v-list>
         </v-navigation-drawer>
 
-        <v-toolbar app clipped-left color="brown white--text">
-            <v-btn icon @click.stop="miniVariant = !miniVariant">
-                <v-icon v-html="miniVariant ? 'chevron_right' : 'chevron_left'"></v-icon>
-            </v-btn>
+        <v-toolbar app clipped-left color="blue white--text">
             <v-toolbar-title v-text="$t('profile.name') + ' :: ' + $t('profile.role')"></v-toolbar-title>
         </v-toolbar>
 
@@ -52,7 +44,7 @@
             <router-view></router-view>
         </v-content>
 
-        <v-footer fixed app color="brown">
+        <v-footer fixed app color="blue white--text">
             <v-layout align-center justify-center row>
                 <v-flex xs10 offset-xs1 text-xs-center>
                     &copy; FonteSolutions - <a target="_blank" href="https://www.fontesolutions.com.br/">www.fontesolutions.com.br</a>
@@ -77,44 +69,22 @@
 </template>
 
 <script>
-    import router from './plugins/router'
     import {curriculum} from './info'
 
     export default {
         name: 'App',
         components: {},
 
-        methods: {
-            goToAnchor: function (item) {
-                router.push({path: item.route})
-            }
-        },
-
-        watch: {
-            // windowHeight(newHeight, oldHeight) {
-                // this.txt = `it changed to ${newHeight} from ${oldHeight}`;
-            // }
-        },
-
-        mounted() {
-            this.$nextTick(() => {
-                window.addEventListener('resize', () => {
-                    this.size = window.innerWidth;
-                    this.miniVariant = this.size > 1000 ? false : true;
-                });
-            })
-        },
-
         data() {
-            // var a = new Info();
-            console.log(curriculum);
-            let dataDefault = require('./locale/en_US');
             return {
-                size: window.innerWidth,
                 drawer: true,
-                miniVariant: this.size > 1000 ? false : true,
-                avatar: dataDefault.messages.profile.avatarLocal ? require(`${dataDefault.messages.profile.avatar}`) : dataDefault.messages.profile.avatar,
+                profile: curriculum.profile,
                 items: [
+                    {
+                        icon: 'info',
+                        route: 'about-me',
+                        title: 'aboutMe'
+                    },
                     {
                         icon: 'insert_chart',
                         route: 'tech-info',
@@ -141,13 +111,18 @@
         margin-left: auto;
     }
 
-    .v-avatar img {
-        width: 22px !important;
-        height: 22px !important;
+    .item-avatar, .item-avatar a {
+        height: 190px !important;
+        background-color: indigo;
+    }
+
+    .v-footer .v-avatar img, .v-select-list .v-avatar img {
+        width: 24px !important;
+        height: 24px !important;
     }
 
     a {
-        color: orange !important;
+        color: indigo !important;
         text-decoration: none;
     }
 </style>
