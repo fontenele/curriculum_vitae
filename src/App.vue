@@ -37,7 +37,7 @@
         </v-navigation-drawer>
 
         <v-toolbar app clipped-left color="blue white--text">
-            <v-toolbar-title v-text="$t('profile.name') + ' :: ' + $t('profile.role')"></v-toolbar-title>
+            <v-toolbar-title v-text="profile.name + ' :: ' + $t('profile.role')"></v-toolbar-title>
         </v-toolbar>
 
         <v-content app>
