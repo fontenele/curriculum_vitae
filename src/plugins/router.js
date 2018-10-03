@@ -13,5 +13,6 @@ const routes = [
 
 const router = new VueRouter({routes});
 Vue.use(VueRouter);
+router.replace('/about-me');
 
 export default router;
